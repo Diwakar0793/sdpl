@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  contactForm!: FormGroup;
+  // contactForm!: FormGroup;
   message: string = '';
   devices = ['MacBook Air',
     'MacBook Pro',
@@ -26,16 +26,16 @@ export class ContactComponent implements OnInit {
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
- this.contactForm = this.fb.group({
+/*  this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
       device: ['', Validators.required],
       message: ['', Validators.required]
-    });
+    }); */
   }
 
-  onSubmit() {
+/*   onSubmit() {
     console.log(this.contactForm.value)
     if (this.contactForm.valid) {
       this.http.post('https://67c697bef2ffe60008bc64b0--wondrous-belekoy-8788e8.netlify.app/contact.php', this.contactForm.value)
@@ -47,6 +47,6 @@ export class ContactComponent implements OnInit {
           this.message = 'Error sending message. Try again later.';
         });
     }
-  }
+  } */
 
 }
