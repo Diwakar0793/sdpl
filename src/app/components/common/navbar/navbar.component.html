@@ -1,0 +1,182 @@
+<header class="header-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-sm-0">
+                <div class="logo">
+                    <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+                    <a routerLink="/"><p style="color: #ce202f;">Superior Digital</p></a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-sm-6 text-end pr-0">
+                <div class="header-content-right">
+                    <ul class="header-contact">
+                        <li><a href="tel:+91 80 2311 6047"><i class="bx bxs-phone-call"></i>+91 80 2311 6047</a></li>
+                        <li><a href="mailto:sales&#64;superiorsystems.in"><i class="bx bxs-envelope"></i>sales&#64;superiorsystems.in</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-sm-6 text-end pl-0">
+                <div class="header-content-right">
+                    <ul class="header-social">
+                        <li><a href="https://www.facebook.com/superiorsystems.in/" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/superior_digital/" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="https://x.com/superior_sd" target="_blank"> <i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/superior-digital-pvt-ltd/" target="_blank"> <i class="bx bxl-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="{{navbarClass}}">
+    <div
+        class="main-nav"
+        [ngClass]="{'sticky': isSticky}"
+    >
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light" [class.active]="classApplied">
+                <a class="navbar-brand d-none" routerLink="/">
+                    <p style="color: #ce202f;">Superior Digital</p>
+                    <!-- <img src="assets/images/logo 3.png" alt="logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-left">
+                        <li class="nav-item">
+                            <a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home</a>
+
+                            <!-- <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home One</a></li>
+
+                                <li class="nav-item"><a routerLink="/home-two" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home Two</a></li>
+
+                                <li class="nav-item"><a routerLink="/home-three" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home Three</a></li>
+                            </ul> -->
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">About Us</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/ourapproach" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Our Approach</a></li>
+
+                                <li class="nav-item"><a routerLink="/ourvision" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Our Vision</a></li>
+
+                                <!-- <li class="nav-item"><a routerLink="/ourteam" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Our Team</a></li> -->
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a routerLink="/case-studies" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Case Studies</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/essilor" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Essilor's Digital Transformation</a></li>
+
+                                <li class="nav-item"><a routerLink="/remidio" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Remidio</a></li>
+                                
+                                <li class="nav-item"><a routerLink="/westpharma" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">WestPharma</a></li>
+
+                                <li class="nav-item"><a routerLink="/msrit" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">MSRIT</a></li>
+
+                                <li class="nav-item"><a routerLink="/jain" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Jain University</a></li>
+
+                                <li class="nav-item"><a routerLink="/sowparnika" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Sowparnika Homes</a></li>
+
+                            </ul>                        
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Services</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/postsales" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Post Sales Support</a></li>
+
+                                <li class="nav-item"><a routerLink="/annualmaintenance" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Annual Maintenance Contract</a></li>
+
+                                <li class="nav-item"><a routerLink="/perincident" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Per Incident Support</a></li>
+
+                                <li class="nav-item"><a routerLink="/dedicated-engineer" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Dedicated Engineer</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Training</a>
+                            
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/macOs-basic" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">macOs - Basic</a></li>
+
+                                <li class="nav-item"><a routerLink="/macOs-advanced" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">macOs - Advanced</a></li>
+
+                                <li class="nav-item"><a routerLink="/it-training" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">IT Training </a></li>
+                            </ul>
+                        </li>
+
+                        
+
+                        <!-- <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Blog</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/blog" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog</a></li>
+
+                                <li class="nav-item"><a routerLink="/blog-details" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Details</a></li>
+                            </ul>
+                        </li> -->
+
+                        <!-- <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Pages</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/team" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Team</a></li>
+
+                                <li class="nav-item"><a routerLink="/pricing" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Pricing</a></li>
+
+                                <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
+
+                                <li class="nav-item"><a routerLink="/testimonials" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Testimonials</a></li>
+
+                                <li class="nav-item"><a routerLink="/sign-up" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Sign Up</a></li>
+
+                                <li class="nav-item"><a routerLink="/sign-in" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Sign In</a></li>
+
+                                <li class="nav-item"><a routerLink="/error" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Error 404</a></li>
+
+                                <li class="nav-item"><a routerLink="/faq" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
+
+                                <li class="nav-item"><a routerLink="/terms-condition" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Terms & Conditions</a></li>
+
+                                <li class="nav-item"><a routerLink="/privacy-policy" cl ass="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Privacy Policy</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="nav-item"><a routerLink="/apple-business" class="nav-link">Apple Business Manager</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="nav-right">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control search" placeholder="Search..." />
+                        </div>
+
+                        <button type="submit">
+                            <i class="bx bx-search"></i>
+                        </button>
+                    </form>
+                </div> -->
+                <div class="nav-btn">
+                    <a routerLink="/solutions" class="box-btn">Request Service</a>&nbsp;
+                    <a routerLink="/contact" class="box-btn border-btn">Contact Sales</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
