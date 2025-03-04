@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     console.log(this.contactForm.value)
     if (this.contactForm.valid) {
-      this.http.post('https://67c697bef2ffe60008bc64b0--wondrous-belekoy-8788e8.netlify.app/contact', this.contactForm.value)
+      this.http.post('https://67c697bef2ffe60008bc64b0--wondrous-belekoy-8788e8.netlify.app/contact.php', this.contactForm.value)
         .subscribe((response: any) => {
           this.message = response.message;
           console.log("message", this.message);
