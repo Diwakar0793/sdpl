@@ -8,19 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
   message: string = '';
-
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.contactForm = this.fb.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required]],
-      phone: ['', [Validators.required]],
-      device: ['', [Validators.required]]
-    });
-  }
-
   devices = ['MacBook Air',
     'MacBook Pro',
     'iMac',
@@ -34,8 +23,16 @@ export class ContactComponent implements OnInit {
     'Other Accessories',
   ];
 
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
+  ngOnInit(): void {
+ this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      device: ['', Validators.required],
+      message: ['', Validators.required]
+    });
   }
 
   onSubmit() {
